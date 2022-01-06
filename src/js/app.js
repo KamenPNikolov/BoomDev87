@@ -9,4 +9,10 @@ window.addEventListener("DOMContentLoaded", () => {
     { job: "programmer", class: "is-danger" },
   ];
   const articles = document.querySelectorAll("article");
+  const arrayOfClasses = R.pluck("class",arrayToPluck);
+  if(articles.length == arrayOfClasses.length){
+     for(let i=0; i<articles.length;i++){
+        articles[i].classList.add(arrayOfClasses[i]);
+    }
+}
 });
